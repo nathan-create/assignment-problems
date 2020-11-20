@@ -1,0 +1,26 @@
+a. 0, the list could be given already sorted for a list of any n elements.
+
+b. For a 5 element list, the maximum swaps is 10. For a list with n number of elements, the amount of swaps is equal to n + (n-1) + (n-2) + ... + (n-n) <--(wich gives 0). And this is because as one element is added to the list, it adds a number of swaps one greater than the previous.
+
+This is just testing
+[5,4,3,2,1] 
+[4,3,2,1,5] 4 swaps
+[3,2,1,4,5] 3 swaps
+[2,1,3,4,5] 2 swaps
+[1,2,3,4,5] 1 swap
+
+[6,5,4,3,2,1]
+[5,4,3,2,1,6] 5 swaps
+[4,3,2,1,5,6] 4 swaps
+[1,2,3,4,5,6] 6 swaps     15 swaps total
+
+c. True, because after each time it goes through, at least one more element will be in order, subtracting from the overall swaps of the next time it goes through the list.
+
+d.False, as shown in the sample case below, the number of swaps in one run through can be equal to the number of swaps in the last. 
+
+More Testing
+[12,6,18,20,3,15,7,32]
+[6,12,18,3,15,7,20,32] 4 swaps
+[6,12,3,15,7,18,20,32] 3 swaps
+[6,3,12,7,15,18,20,32] 2 swaps
+[3,6,7,12,15,18,20,32] 2 swaps
