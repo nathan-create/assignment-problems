@@ -1,12 +1,9 @@
 def cartesian_product(arrs):
-    result = []
+    points=[[]]
     for arr in arrs:
         for val in arr:
-            if arr.index(val) == 0:
-                result.append([val])
-            else:
-                for point in result:
-                    point.append(val)
-    return result        
+            for point in points:
+                point.append(val)
+    return points     
 
 print(cartesian_product([['a'], [1,2,3], ['Y','Z']]))
