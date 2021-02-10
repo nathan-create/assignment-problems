@@ -1,7 +1,7 @@
 # include <iostream>
 # include <cassert>
 
-int calcFibTerm(int index){
+int calcTerm(int index){
     int fib_zero = 0;
     int fib_one = 1;
     int sum = 0;
@@ -28,12 +28,12 @@ int metaFibonacciSum(int n)
 
     int terms[n+1];
     for (int i = 0; i <= n; i++){
-        terms[i] = calcFibTerm(i);
+        terms[i] = calcTerm(i);
     }
     
     int extendedTerms[terms[n]+1];
     for (int i = 0; i <= terms[n]; i++){
-        extendedTerms[i] = calcFibTerm(i);
+        extendedTerms[i] = calcTerm(i);
     }
 
     int partialSums[terms[n]+1];
